@@ -1,0 +1,9 @@
+# Created by pytest automatically.
+data/raw/*
+.pytest_cache
+*.env
+*.pyc
+*__pycache__/
+.vscode
+*.db
+*.pem

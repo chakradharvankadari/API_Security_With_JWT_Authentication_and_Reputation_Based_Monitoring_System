@@ -1,0 +1,139 @@
+{
+  "profiles": [
+    {
+      "file": "attack_patterns.csv",
+      "rows": 29907,
+      "columns": 12,
+      "column_names": [
+        "timestamp",
+        "user_id",
+        "endpoint",
+        "http_method",
+        "response_status",
+        "response_time_ms",
+        "ip_address",
+        "user_agent",
+        "geo_location",
+        "attack_type",
+        "is_attack",
+        "anomaly_score"
+      ],
+      "non_numeric_counts": {},
+      "top_empty_columns": []
+    },
+    {
+      "file": "api_access_behaviour_anomaly.csv",
+      "rows": 1699,
+      "columns": 12,
+      "column_names": [
+        "",
+        "_id",
+        "inter_api_access_duration(sec)",
+        "api_access_uniqueness",
+        "sequence_length(count)",
+        "vsession_duration(min)",
+        "ip_type",
+        "num_sessions",
+        "num_users",
+        "num_unique_apis",
+        "source",
+        "classification"
+      ],
+      "non_numeric_counts": {},
+      "top_empty_columns": [
+        {
+          "column": "inter_api_access_duration(sec)",
+          "empty_rows": 4
+        },
+        {
+          "column": "api_access_uniqueness",
+          "empty_rows": 4
+        }
+      ]
+    },
+    {
+      "file": "network_traffic_flows.csv",
+      "rows": 2704839,
+      "columns": 50,
+      "column_names": [
+        "flow_key",
+        "src_ip_numeric",
+        "src_ip",
+        "src_port",
+        "dst_ip",
+        "dst_port",
+        "proto",
+        "pktTotalCount",
+        "octetTotalCount",
+        "min_ps",
+        "max_ps",
+        "avg_ps",
+        "std_dev_ps",
+        "flowStart",
+        "flowEnd",
+        "flowDuration",
+        "min_piat",
+        "max_piat",
+        "avg_piat",
+        "std_dev_piat",
+        "f_pktTotalCount",
+        "f_octetTotalCount",
+        "f_min_ps",
+        "f_max_ps",
+        "f_avg_ps",
+        "f_std_dev_ps",
+        "f_flowStart",
+        "f_flowEnd",
+        "f_flowDuration",
+        "f_min_piat",
+        "f_max_piat",
+        "f_avg_piat",
+        "f_std_dev_piat",
+        "b_pktTotalCount",
+        "b_octetTotalCount",
+        "b_min_ps",
+        "b_max_ps",
+        "b_avg_ps",
+        "b_std_dev_ps",
+        "b_flowStart",
+        "b_flowEnd",
+        "b_flowDuration",
+        "b_min_piat",
+        "b_max_piat",
+        "b_avg_piat",
+        "b_std_dev_piat",
+        "flowEndReason",
+        "category",
+        "application_protocol",
+        "web_service"
+      ],
+      "non_numeric_counts": {
+        "pktTotalCount": 0,
+        "octetTotalCount": 0,
+        "flowDuration": 0,
+        "std_dev_ps": 0
+      },
+      "top_empty_columns": []
+    },
+    {
+      "file": "reputation_seed.csv",
+      "rows": 1000,
+      "columns": 11,
+      "column_names": [
+        "user_id",
+        "email",
+        "initial_trust_score",
+        "success_count",
+        "failure_count",
+        "total_requests",
+        "avg_response_time",
+        "registration_date",
+        "last_activity",
+        "account_age_days",
+        "is_verified"
+      ],
+      "non_numeric_counts": {},
+      "top_empty_columns": []
+    }
+  ]
+}

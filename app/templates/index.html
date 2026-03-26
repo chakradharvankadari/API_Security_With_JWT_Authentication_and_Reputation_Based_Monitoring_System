@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure API Reputation Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="bg-layer"></div>
+    <header class="hero">
+      <h1>Secure API Reputation Console</h1>
+      <p>Context-bound JWT auth, live request processing, and reputation-based blocking in one dashboard.</p>
+    </header>
+
+    <main class="grid">
+      <section class="panel">
+        <h2>Auth Setup</h2>
+        <form id="registerForm" class="form">
+          <h3>Register</h3>
+          <input name="email" type="email" placeholder="email@example.com" required />
+          <input name="password" type="password" placeholder="Password" required />
+          <button type="submit">Create Account</button>
+        </form>
+
+        <form id="loginForm" class="form">
+          <h3>Login</h3>
+          <input name="email" type="email" placeholder="email@example.com" required />
+          <input name="password" type="password" placeholder="Password" required />
+          <button type="submit">Login + Store Token</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Protected API Demo</h2>
+        <form id="processForm" class="form">
+          <label for="seconds">Processing seconds (0-30)</label>
+          <input id="seconds" name="seconds" type="number" min="0" max="30" step="1" value="2" required />
+          <button id="processBtn" type="submit">Run /api/process</button>
+        </form>
+
+        <div class="actions">
+          <button id="myReputationBtn" type="button">Get My Reputation</button>
+        </div>
+        <p class="hint">Process and reputation actions unlock after successful login.</p>
+      </section>
+
+      <section class="panel full">
+        <h2>Session + API Output</h2>
+        <div class="token-box">
+          <p><strong>Access token:</strong> <span id="tokenPreview">No token</span></p>
+          <p><strong>Fingerprint:</strong> <span id="fpPreview">Not set</span></p>
+        </div>
+        <pre id="output" class="output">Ready.</pre>
+      </section>
+    </main>
+
+    <footer class="footer-admin">
+      <div class="footer-inner">
+        <h3>Admin Features</h3>
+        <form id="adminForm" class="form">
+          <input name="admin_key" type="text" placeholder="X-Admin-Key" />
+          <div class="action-row">
+            <button id="summaryBtn" type="button">Summary</button>
+            <button id="blockedBtn" type="button">Blocked Users</button>
+            <button id="eventsBtn" type="button">Recent Events</button>
+          </div>
+          <div class="action-row">
+            <input name="unblock_user_id" type="number" min="1" placeholder="user id to unblock" />
+            <button id="unblockBtn" type="button">Unblock User</button>
+          </div>
+        </form>
+      </div>
+    </footer>
+
+    <script src="/static/app.js"></script>
+  </body>
+  </html>
