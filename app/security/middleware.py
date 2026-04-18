@@ -55,7 +55,7 @@ def require_enhanced_auth(view_func):
                 jsonify(
                     {
                         "error": "context_mismatch",
-                        "message": "Request context does not match token context",
+                        "message": "Request context changed. Please login again.",
                         "reasons": reasons,
                     }
                 ),
